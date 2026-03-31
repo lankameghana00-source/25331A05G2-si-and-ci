@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    float p, r, t, si, ci, amount;
-    printf("Enter Principal: ");
+    float p, r, t, SI, CI, amount;
+    int i;
+    printf("Enter Principal amount: ");
     scanf("%f", &p);
-    printf("Enter Rate: ");
+    printf("Enter Rate of interest: ");
     scanf("%f", &r);
-    printf("Enter Time: ");
+    printf("Enter Time (in years): ");
     scanf("%f", &t);
-    si = (p * r * t) / 100;
-    Compound Interest (simple formula)
-    amount = p * (1 + r/100) * (1 + r/100);
-    ci = amount - p;
-    printf("Simple Interest = %.2f\n", si);
-    printf("Compound Interest = %.2f\n", ci);
-    return 0;
+    SI = (p * r * t) / 100;
+    amount = p;
+    for(i = 1; i <= t; i++) {
+        amount = amount * (1 + r / 100);
+    }
+    CI = amount - p;
+    printf("\nSimple Interest = %.2f", SI);
+    printf("\nCompound Interest = %.2f", CI);
+     return 0;
 }
