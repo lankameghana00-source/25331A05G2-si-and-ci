@@ -10,7 +10,7 @@ int main() {
     scanf("%f", &t);
     si = (p * r * t) / 100;
     Compound Interest (simple formula)
-    amount = p * (1 + r/100) * (1 + r/100);  // for 2 years
+    amount = p * (1 + r/100) * (1 + r/100);
     ci = amount - p;
     printf("Simple Interest = %.2f\n", si);
     printf("Compound Interest = %.2f\n", ci);
